@@ -1,6 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 
+#define DMENU(script) "/home/maxim/script/dmenu/"script
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 16;       /* gaps between windows */
@@ -72,18 +74,21 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 };
 
-/* commands */
+/* dmenu commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+
+/* no customization needed with custom dmenu patch matching dwm theme. */
 static const char *dmenucmd[] = { "dmenu_run", 
 	"-m",  dmenumon , 
-	"-fn", font_mono,
-	"-nb", clr_black, 
-	"-nf", clr_gray , 
-	"-sb", clr_black, 
-	"-sf", clr_white,
 	NULL,
 };
 
+static const char *font_awesome_menu[] = { DMENU("font-awesome-clipboard.sh"),
+	NULL,
+};
+
+
+/* other commands */
 static const char *termcmd[]  = { "st", 
 	NULL,
 };
@@ -140,6 +145,7 @@ static Key keys[] = {
 	/* spawners */
 	{ MODKEY|ShiftMask, XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,           XK_p,                    spawn,          {.v = dmenucmd } },
+	{ MODKEY,           XK_o,                    spawn,          {.v = font_awesome_menu } },
 	{ 0,                XF86XK_MonBrightnessUp,  spawn,          {.v = incr_brightness } },
 	{ 0,                XF86XK_MonBrightnessDown,spawn,          {.v = decr_brightness } },
 	{ 0,                XK_F7,                   spawn,          {.v = mute_source } },
