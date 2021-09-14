@@ -94,12 +94,12 @@ static const char *termcmd[]  = { "st",
 };
 
 static const char *incr_brightness[] = { "brightness-mod.sh",
-	"1",
+	"5",
 	NULL,
 };
 
 static const char *decr_brightness[] = { "brightness-mod.sh",
-	"-1",
+	"-5",
 	NULL,
 };
 
@@ -131,6 +131,10 @@ static const char *decr_sink[] = { "pactl",
 	NULL,
 };
 
+static const char *root_screenshot[] = { "roottoclip.sh", NULL };
+
+static const char *win_screenshot[] = { "wintoclip.sh", NULL };
+
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -152,6 +156,8 @@ static Key keys[] = {
 	{ 0,                XF86XK_AudioMute,        spawn,          {.v = mute_sink } },
 	{ 0,                XF86XK_AudioRaiseVolume, spawn,          {.v = incr_sink } },
 	{ 0,                XF86XK_AudioLowerVolume, spawn,          {.v = decr_sink } },
+	{ MODKEY,           XK_r,                    spawn,          {.v = root_screenshot } },
+	{ MODKEY,           XK_s,                    spawn,          {.v = win_screenshot } },
 
 	/* spawners */
 	{ MODKEY,           XK_b,                    togglebar,      {0} },
