@@ -83,7 +83,7 @@ static const char *dmenucmd[] = { "dmenu_run",
 	NULL,
 };
 
-static const char *font_awesome_menu[] = { DMENU("font-awesome-clipboard.sh"),
+static const char *font_awesome_menu[] = { "font-awesome-clipboard.sh",
 	NULL,
 };
 
@@ -131,9 +131,9 @@ static const char *decr_sink[] = { "pactl",
 	NULL,
 };
 
-static const char *root_screenshot[] = { "roottoclip.sh", NULL };
+static const char *root_screenshot[] = { "xroot2png.sh", NULL };
 
-static const char *win_screenshot[] = { "wintoclip.sh", NULL };
+static const char *win_screenshot[] = { "xwin2png.sh", NULL };
 
 
 /* key definitions */
