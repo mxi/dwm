@@ -58,11 +58,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",     NULL,     NULL,           0,         1,          0,          0,         -1      },
-	{ "Firefox",  NULL,     NULL,           1 << 8,    0,          0,          0,         -1      },
-	{ "st",       NULL,     NULL,           0,         0,          1,          0,         -1      },
-	{ NULL,       NULL,     "Event Tester", 0,         0,          0,          1,         -1      }, /* xev */
+	/* class          instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "Gimp",         NULL,     NULL,           0,         1,          0,          0,         -1      },
+	{ "Firefox",      NULL,     NULL,           1 << 8,    0,          0,          0,         -1      },
+	{ "st",           NULL,     NULL,           0,         0,          1,          0,         -1      },
+	{ NULL,           NULL,     "Event Tester", 0,         0,          0,          1,         -1      }, /* xev */
+	{ "Learn OpenGL", NULL,     NULL,           0,         0,          0,          1,         -1      }, /* my stuff */
 };
 
 /* layout(s) */
@@ -88,6 +89,11 @@ static const char *dmenucmd[] = { "dmenu_run",
 
 static const char *font_awesome_menu[] = { "font-awesome-clipboard.sh",
 	NULL,
+};
+
+
+static const char *unicode_menu[] = { "unicode-clipboard.sh",
+	NULL
 };
 
 
@@ -136,8 +142,7 @@ static const char *decr_sink[] = { "pactl",
 
 static const char *root_screenshot[] = { "xroot2png.sh", NULL };
 
-static const char *win_screenshot[] = { "xwin2png.sh", NULL };
-
+static const char *win_screenshot[] = { "maim2png.sh", NULL };
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -153,6 +158,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,           XK_p,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,           XK_o,                    spawn,          {.v = font_awesome_menu } },
+	{ MODKEY,           XK_u,                    spawn,          {.v = unicode_menu } },
 	{ 0,                XF86XK_MonBrightnessUp,  spawn,          {.v = incr_brightness } },
 	{ 0,                XF86XK_MonBrightnessDown,spawn,          {.v = decr_brightness } },
 	{ 0,                XK_F7,                   spawn,          {.v = mute_source } },
