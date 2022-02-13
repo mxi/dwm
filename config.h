@@ -11,10 +11,10 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
-static const char font_mono[]       = "Noto Mono:size=14:antialias=true:autohint=true";
-static const char font_sans[]       = "Noto Sans:size=14:antialias=true:autohint=true";
-static const char font_serif[]      = "Noto Serif:size=14:antialias=true:autohint=true";
-static const char font_awesome[]    = "Font Awesome 5 Free:size=14:antialias=true:autohint=true";
+static const char font_mono[]       = "Hack:size=12:antialias=true:autohint=true";
+static const char font_sans[]       = "Noto Sans:size=12:antialias=true:autohint=true";
+static const char font_serif[]      = "Noto Serif:size=12:antialias=true:autohint=true";
+static const char font_awesome[]    = "Font Awesome 5 Free:size=12:antialias=true:autohint=true";
 static const char *fonts[]          = { 
 	font_mono,
 	font_sans,
