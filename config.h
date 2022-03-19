@@ -24,10 +24,10 @@ static const char *fonts[]          = {
 
 static const char clr_black[]       = "#000000";
 static const char clr_gray []       = "#808080";
-static const char clr_white[]       = "#ffffff";
+static const char clr_white[]       = "#ffffff"; /* actually gold doe */
 static const char clr_red  []       = "#ff6060";
 static const char clr_green[]       = "#60ff60";
-static const char clr_blue []       = "#6060ff";
+static const char clr_blue []       = "#079ff7";
 
 enum { 
 	SchemeNorm, 
@@ -63,7 +63,8 @@ static const Rule rules[] = {
 	{ "Firefox",      NULL,     NULL,           1 << 8,    0,          0,          0,         -1      },
 	{ "st",           NULL,     NULL,           0,         0,          1,          0,         -1      },
 	{ NULL,           NULL,     "Event Tester", 0,         0,          0,          1,         -1      }, /* xev */
-	{ "Learn OpenGL", NULL,     NULL,           0,         0,          0,          1,         -1      }, /* my stuff */
+	{ NULL,           NULL,     "Learn OpenGL", 0,         0,          0,          1,         -1      }, /* my stuff */
+	{ NULL,           NULL,     "MVK-3",        0,         0,          0,          1,         -1      }, /* my stuff */
 };
 
 /* layout(s) */
