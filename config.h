@@ -64,7 +64,8 @@ static const Rule rules[] = {
 	{ "st",           NULL,     NULL,           0,         0,          1,          0,         -1      },
 	{ NULL,           NULL,     "Event Tester", 0,         0,          0,          1,         -1      }, /* xev */
 	{ NULL,           NULL,     "Learn OpenGL", 0,         0,          0,          1,         -1      }, /* my stuff */
-	{ NULL,           NULL,     "MVK-3",        0,         0,          0,          1,         -1      }, /* my stuff */
+	{ "MK",           NULL,     NULL,           0,         0,          0,          1,         -1      }, /* my stuff */
+	{ "AF",           NULL,     NULL,           0,         0,          0,          1,         -1      }, /* my stuff */
 };
 
 /* layout(s) */
