@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 
-#define DMENU(script) "/home/maxim/script/dmenu/"script
+#define DMENU(script) "/home/maxim/code/sh/dmenu/"script
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
